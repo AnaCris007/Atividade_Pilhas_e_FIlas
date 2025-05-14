@@ -1,11 +1,5 @@
-//Permite capturar as entradas do usuário no terminal
+// Importa o módulo 'readline' do Node.js para capturar entradas do usuário via terminal
 const readline = require('readline');
-
-//Função que faz o programa esperar um pouco antes de continuar
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 
 //Pilha de prontuários (LIFO)
 
@@ -114,22 +108,32 @@ const filaPacientes = new Fila();
 // Criando a pilha de pacientes
 const pilhaPacientes = new Pilha();
 
-// Interface para entrada do usuário
+// Interface para entrada do usuário via terminal
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+  input: process.stdin,   // Define a entrada padrão como o teclado (terminal)
+  output: process.stdout  // Define a saída padrão como a tela (terminal)
 });
 
+// Inicializa um contador para controlar quantos pacientes já foram cadastrados
 let contador = 0;
 
+// Exibe uma mensagem inicial no terminal para o usuário
 console.log("👩‍⚕️ Cadastro de pacientes - Digite o nome de 5 pacientes: ");
 
+// Função recursiva para cadastrar pacientes um por um
 function cadastrarPaciente() {
+  // Verifica se ainda não foram cadastrados 5 pacientes
   if (contador < 5) {
+    // Solicita ao usuário que digite o nome do paciente
     rl.question(`Nome do paciente ${contador + 1}: `, (nome) => {
+      // Adiciona o nome do paciente à fila
       filaPacientes.enfileirar(nome);
+      
+      // Incrementa o contador para passar para o próximo paciente
       contador++;
-      cadastrarPaciente(); // chama novamente até completar os 5
+
+      // Chama a função novamente para cadastrar o próximo paciente
+      cadastrarPaciente();
     });
   } else {
     // Quando terminar de cadastrar os 5
