@@ -4,40 +4,34 @@ Este projeto tem como objetivo simular o atendimento hospitalar, organizando a f
 
 A atividade é dividida em dois fluxos principais:
 
-Fila de atendimento hospitalar: Simula a chegada e atendimento de pacientes em uma fila, seguindo a regra FIFO (First-In-First-Out).
+- Fila de atendimento hospitalar: Simula a chegada e atendimento de pacientes em uma fila, seguindo a regra FIFO (First-In-First-Out).
 
-Pilha de prontuários: Após o atendimento, os prontuários dos pacientes são empilhados em ordem reversa para arquivamento, utilizando a regra LIFO (Last-In-First-Out).
+- Pilha de prontuários: Após o atendimento, os prontuários dos pacientes são empilhados em ordem reversa para arquivamento, utilizando a regra LIFO (Last-In-First-Out).
 
 ## Estrutura do Projeto
-Classes Implementadas
-Pilha (LIFO):
+### Classes Implementadas:
+### Pilha (LIFO):
 
-Empilha os prontuários dos pacientes após o atendimento.
+- Empilha os prontuários dos pacientes após o atendimento.
 
-Permite buscar um paciente específico dentro da pilha.
+- Permite buscar um paciente específico dentro da pilha.
 
-Fila (FIFO):
+### Fila (FIFO):
 
-Organiza a chegada dos pacientes, atendendo-os na ordem em que chegam.
+- Organiza a chegada dos pacientes, atendendo-os na ordem em que chegam.
 
-Permite verificar o próximo paciente a ser atendido.
+- Permite verificar o próximo paciente a ser atendido.
 
-Fluxos Implementados
-Adição de pacientes à fila: 5 pacientes fictícios são adicionados à fila de atendimento.
+### Fluxos Implementados
+- Adição de pacientes à fila: 5 pacientes fictícios são adicionados à fila de atendimento.
 
-Atendimento de pacientes: O próximo paciente é atendido (removido da fila) e seu nome é adicionado à pilha de prontuários.
+- Atendimento de pacientes: O próximo paciente é atendido (removido da fila) e seu nome é adicionado à pilha de prontuários.
 
 ## Como executar o arquivo hospital.js
-Para rodar o arquivo no seu terminal, siga os passos abaixo:
-
-Certifique-se de ter o Node.js instalado na sua máquina.
-
-No terminal, navegue até o diretório onde o arquivo hospital.js está localizado.
-
-Execute o comando:
+Para rodar o arquivo no seu terminal, certifique-se de ter o Node.js instalado na sua máquina. No terminal, navegue até o diretório onde o arquivo hospital.js está localizado e execute o comando:
 
 `
-node hospital.js
+        node hospital.js
 `
 
 ## Fluxo da Simulação
@@ -48,28 +42,28 @@ Após o cadastro, o sistema irá simular o atendimento dos pacientes e adicionar
 O sistema irá mostrar a fila restante e a pilha de prontuários ao final do atendimento.
 
 ## Estrutura do Código
-O código está organizado da seguinte forma:
 
 ### Fila:
 
-Implementação da estrutura FIFO para a organização de pacientes.
+- Implementação da estrutura FIFO para a organização de pacientes.
 
-Métodos para adicionar pacientes (enfileirar), remover pacientes (desenfileirar), verificar a fila atual e outras operações úteis.
+- Métodos para adicionar pacientes (enfileirar), remover pacientes (desenfileirar), verificar a fila atual e outras operações úteis.
 
 ### Pilha:
 
-Implementação da estrutura LIFO para a organização dos prontuários.
+- Implementação da estrutura LIFO para a organização dos prontuários.
 
-Métodos para empilhar prontuários (empilhar), desempilhar (desempilhar), e verificar o topo da pilha.
+- Métodos para empilhar prontuários (empilhar), desempilhar (desempilhar), e verificar o topo da pilha.
 
-Simulação:
+### Simulação:
 
-Funções de simulação que gerenciam a entrada dos pacientes, o atendimento e o gerenciamento da fila e pilha.
+Funções de simulação que gerenciam a entrada dos pacientes, o atendimento e o gerenciamento da fila e da pilha.
 
 ## Tecnologias Usadas
-Node.js: Para executar o código JavaScript no ambiente de servidor.
 
-JavaScript: Utilizado para a implementação das classes e simulação.
+- Node.js: Para executar o código JavaScript no ambiente de servidor.
+
+- JavaScript: Utilizado para a implementação das classes e simulação.
 
 ## Considerações Finais
 Este projeto simula um cenário de atendimento hospitalar utilizando estruturas de dados fundamentais (Fila e Pilha). Ele foi desenvolvido para treinar o entendimento e a aplicação dessas estruturas.
